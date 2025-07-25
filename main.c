@@ -58,7 +58,7 @@ int main() {
     client_len = sizeof(client_address);
     socket_client = accept(socket_listen, (struct sockaddr *) &client_address, &client_len);
     if (socket_client < 0) {
-      perror("accept failed");
+      errorHandle("Accept failed", 0, 0);
       continue;
     }
     handleClient(socket_client, socket_listen, (struct sockaddr *) &client_address, &client_len);
