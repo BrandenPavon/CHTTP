@@ -1,0 +1,13 @@
+CHTTP
+
+Clone the repo:
+git clone https://github.com/BrandenPavon/CHTTP.git
+
+Description:
+    HTTP Server in C
+
+Build:
+    make
+Build clean:
+    make clean
+
