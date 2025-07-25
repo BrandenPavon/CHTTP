@@ -17,7 +17,7 @@
 char * parse_path() {return NULL;}
 
 int recvValid(int sock, char * req, int reqbuff, int flags) {
-  int bytes_recv = recv(sock, req, reqbuff-1, 0);
+  int bytes_recv = recv(sock, req, reqbuff-1, flags);
   if (bytes_recv > 0 && bytes_recv < REQBUFFER) {
     req[bytes_recv] = '\0';
   } else {
@@ -48,6 +48,9 @@ ssize_t send_all(int sock, const char * buff, size_t len, int flags) {
 }
 
 int handleClient(int socket_client, int sock_listen, struct sockaddr * client_address, socklen_t * client_len) {
+  if (sock_listen < 0) {
+    return errorHandle("SOCKLISTEN NOT OPEN", &socket_client, 0);
+  }
   char add_buff[128];
   char request[REQBUFFER];
   FILE *fp;
