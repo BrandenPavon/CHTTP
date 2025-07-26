@@ -10,4 +10,6 @@ Build:
   make
 Build clean:
   make clean
+Run:
+  ./main
 
