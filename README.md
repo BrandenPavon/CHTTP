@@ -2,13 +2,17 @@ CHTTP
 
 Getting Started (Debian-based distros)
 ---------------
-```sh
+1. Install requirements
+    ```sh
     sudo apt update
+    ```
+    ```sh
     sudo apt install build-essential
     ```
-
-Clone the repo:
-  git clone https://github.com/BrandenPavon/CHTTP.git
+2. Clone the repo:
+    ```sh
+    git clone https://github.com/BrandenPavon/CHTTP.git
+    ```
 
 Description:
     HTTP Server in C
