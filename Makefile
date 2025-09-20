@@ -1,6 +1,6 @@
 include config.mk
 
-SRC = main.c client.c error.c headers.c
+SRC = src/main.c src/client.c src/error.c src/headers.c
 OBJ = ${SRC:.c=.o}
 
 
