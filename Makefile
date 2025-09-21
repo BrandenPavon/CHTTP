@@ -36,4 +36,4 @@ optionsdebug:
 main: ${OBJ}
 	${CC} -o $@ ${OBJ} ${CFLAGS_RELEASE} ${LDFLAGS_RELEASE}
 clean:
-	rm main *.o 
+	rm main src/*.o 
