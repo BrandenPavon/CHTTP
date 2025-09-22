@@ -6,6 +6,9 @@ OBJ = ${SRC:.c=.o}
 
 all: release 
 
+CFLAGS_RELEASE += -Iinclude
+CFLAGS_DEBUG += -Iinclude
+
 debug: CFLAGS := $(CFLAGS_DEBUG)
 debug: LDFLAGS := $(LDFLAGS_DEBUG)
 debug: optionsdebug main
