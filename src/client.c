@@ -57,7 +57,7 @@ int handleClient(int socket_client, int sock_listen, struct sockaddr * client_ad
   getnameinfo(client_address, *client_len, add_buff, sizeof(add_buff), 0, 0, NI_NUMERICHOST);
   recvValid(socket_client, request, REQBUFFER-1, 0);
 
-  fp = fopen("index.html", "rb");
+  fp = fopen("templates/index.html", "rb");
   if (!fp) {
     send_all(socket_client, not_found_response, strlen(not_found_response), 0);
     return errorHandle("FILE NOT FOUND", &socket_client, 0);
