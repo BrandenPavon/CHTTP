@@ -13,6 +13,7 @@
 #include "client.h"
 #include "error.h"
 
+#define PORT "8089"
 
 int setupSocket() {
   struct addrinfo hints;
@@ -21,7 +22,7 @@ int setupSocket() {
   hints.ai_socktype = SOCK_STREAM;
   hints.ai_flags = AI_PASSIVE;
   struct addrinfo *bind_address;
-  int r = getaddrinfo(0, "8089", &hints, &bind_address);
+  int r = getaddrinfo(0, PORT, &hints, &bind_address);
   if (r != 0) {
     return errorHandle("getaddrinfo failed", 0, 0);
   }
