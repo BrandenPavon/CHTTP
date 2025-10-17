@@ -24,3 +24,4 @@ Build clean:
 Run:
   ./main
 
+The server is running on 127.0.0.1:8089
