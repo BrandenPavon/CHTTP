@@ -55,6 +55,11 @@ int main() {
   socklen_t client_len = sizeof(client_address);
   int socket_client;
   
+
+  printf("Server is running on 127.0.0.1:");
+  printf(PORT);
+  printf("\n");
+
   while(1) {
     client_len = sizeof(client_address);
     socket_client = accept(socket_listen, (struct sockaddr *) &client_address, &client_len);
