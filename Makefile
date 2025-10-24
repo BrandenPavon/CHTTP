@@ -1,11 +1,11 @@
 include config.mk
 
 SRC = src/main.c src/client.c src/error.c src/headers.c
-OBJ = ${SRC:.c=.o}
+OBJ = $(patsubst src/%.c,build/%.o,$(SRC))
 
+all: release
 
-all: release 
-
+# include directory
 CFLAGS_RELEASE += -Iinclude
 CFLAGS_DEBUG += -Iinclude
 
@@ -33,10 +33,13 @@ optionsdebug:
 	@echo "CC = ${CC}"
 	@echo "--------------------------"
 
-.c.o:
-	${CC} -c -o $@ ${CFLAGS_RELEASE} $< 
+# build directory rule
+build/%.o: src/%.c
+	@mkdir -p build
+	${CC} -c -o $@ ${CFLAGS} $<
 
 main: ${OBJ}
-	${CC} -o $@ ${OBJ} ${CFLAGS_RELEASE} ${LDFLAGS_RELEASE}
+	${CC} -o $@ ${OBJ} ${CFLAGS} ${LDFLAGS}
+
 clean:
-	rm main src/*.o 
+	rm -rf main build
