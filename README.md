@@ -1,27 +1,51 @@
-CHTTP
+Here’s a clean copy-paste `README.md`:
 
-Getting Started (Debian-based distros)
----------------
-1. Install requirements
-    ```sh
-    sudo apt update
-    ```
-    ```sh
-    sudo apt install build-essential
-    ```
-2. Clone the repo:
-    ```sh
-    git clone https://github.com/BrandenPavon/CHTTP.git
-    ```
+````markdown
+# CHTTP
 
-Description:
-    HTTP Server in C
+## Description
+HTTP server written in C.
 
-Build:
-  make
-Build clean:
-  make clean
-Run:
-  ./main
+## Requirements (Debian-based systems)
 
-The server is running on 127.0.0.1:8089
+```sh
+sudo apt update
+sudo apt install build-essential
+````
+
+## Installation
+
+```sh
+git clone https://github.com/BrandenPavon/CHTTP.git
+cd CHTTP
+```
+
+## Build
+
+```sh
+make
+```
+
+## Clean
+
+```sh
+make clean
+```
+
+## Run
+
+```sh
+./main
+```
+
+## Server
+
+Runs on:
+
+```
+127.0.0.1:8089
+```
+
+```
+```
+
