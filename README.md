@@ -1,6 +1,4 @@
-Here’s a clean copy-paste `README.md`:
 
-````markdown
 # CHTTP
 
 ## Description
@@ -11,7 +9,6 @@ HTTP server written in C.
 ```sh
 sudo apt update
 sudo apt install build-essential
-````
 
 ## Installation
 
@@ -44,8 +41,5 @@ Runs on:
 
 ```
 127.0.0.1:8089
-```
-
-```
 ```
 
